@@ -1,0 +1,155 @@
+/* Base Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 2rem;
+    color: #10221b;
+}
+
+/* Shop Section */
+.shop {
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+.shop .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #10221b;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.shop .swiper-container {
+    width: 100%;
+}
+
+.shop .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* Ensure swiper container has space for 3 slides per row */
+}
+
+.shop .swiper-slide {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.shop .swiper-slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color: #10221b;
+}
+
+.shop .slide .image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    border-bottom: 2px solid #ddd;
+}
+
+.shop .slide .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.shop .slide .image:hover img {
+    transform: scale(1.1);
+}
+
+.shop .slide .image .icons {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.shop .slide:hover .image .icons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.shop .slide .image .icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.5rem;
+    background: rgba(16, 34, 27, 0.75);
+    color: #fff;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.shop .slide .image .icons a:hover {
+    background: #219150;
+    transform: scale(1.1);
+}
+
+.shop .slide .content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.shop .slide .content h3 {
+    font-size: 1.75rem;
+    color: #10221b;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.shop .slide .content .price {
+    font-size: 1.5rem;
+    color: #219150;
+    margin: 0.5rem 0;
+}
+
+.shop .slide .content .stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.shop .slide .content .stars i {
+    font-size: 1.5rem;
+    color: #f5c518;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .shop .swiper-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .shop .swiper-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

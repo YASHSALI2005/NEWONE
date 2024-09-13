@@ -1,0 +1,104 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Packages Section */
+.packages {
+    background: #f9f9f9;
+    padding: 2rem;
+}
+
+.packages .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.packages .box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 350px;
+}
+
+.packages .box:hover {
+    background: #10221b;
+    border-color: #10221b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.packages .box:hover .content h3,
+.packages .box:hover .content .price,
+.packages .box:hover .btn {
+    color: #fff;
+}
+
+.packages .box:hover .btn {
+    border-color: #fff;
+}
+
+.packages .box:hover .btn:hover {
+    background: #fff;
+    color: #10221b;
+}
+
+.packages .box .image {
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.packages .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.packages .box .content {
+    padding: 1rem;
+}
+
+.packages .box .content h3 {
+    font-size: 1.75rem;
+    color: #10221b;
+    margin: 0.5rem 0;
+}
+
+.packages .box .content .price {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin: 1rem 0;
+}
+
+.packages .box .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #10221b;
+    background: #fff;
+    border: 2px solid #10221b;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.packages .box .btn:hover {
+    background: #10221b;
+    color: #fff;
+}
